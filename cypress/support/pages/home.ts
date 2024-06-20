@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import{ IMAGES, MENU, TEXTS, TITLES_SUBTITLES} from "./elements";
+import{ IMAGES, MENU, TEXTS, TITLES_SUBTITLES, CANDYTABLE} from "./elements";
 import '@percy/cypress';
 
 class validate {
@@ -44,6 +44,51 @@ class validate {
         cy.get(TITLES_SUBTITLES.article_subtitle).should('have.text', Cypress.env('Titles_Subtitles').story_subtitle)
         cy.get(TITLES_SUBTITLES.article_subtitle1).should('have.text', Cypress.env('Titles_Subtitles').story_subtitle1)
         cy.get(TITLES_SUBTITLES.aside_subtitle).should('have.text', Cypress.env('Titles_Subtitles').list_subtitle)
+    }
+
+    candytable(){
+
+        cy.get(CANDYTABLE.Cupcake).should('have.text', Cypress.env('Candy_Table').Cupcake)
+        .contains('1.5').should('exist')
+
+        cy.get(CANDYTABLE.Donut).should('have.text', Cypress.env('Candy_Table').Donut)
+        .contains('1.6').should('exist')
+
+        cy.get(CANDYTABLE.Eclair).should('have.text', Cypress.env('Candy_Table').Eclair)
+        .contains('3.0').should('exist')
+
+        cy.get(CANDYTABLE.Frovo).should('have.text', Cypress.env('Candy_Table').Frovo)
+        .contains('2.2').should('exist')
+
+        cy.get(CANDYTABLE.Gingerbread).should('have.text', Cypress.env('Candy_Table').Gingerbread)
+        .contains('2.3').should('exist')
+
+        cy.get(CANDYTABLE.Honeycomb).should('have.text', Cypress.env('Candy_Table').Honeycomb)
+        .contains('3.0').should('exist')
+
+        cy.get(CANDYTABLE.IceCreamSandwich).should('have.text', Cypress.env('Candy_Table').IceCreamSandwich)
+        .contains('4.0').should('exist')
+
+        cy.get(CANDYTABLE.JellyBean).should('have.text', Cypress.env('Candy_Table').JellyBean)
+        .contains('4.1').should('exist')
+
+        cy.get(CANDYTABLE.KitKat).should('have.text', Cypress.env('Candy_Table').KitKat)
+        .contains('4.4').should('exist')
+
+        cy.get(CANDYTABLE.Lolipop).should('have.text', Cypress.env('Candy_Table').Lolipop)
+        .contains('5.0').should('exist')
+
+        cy.get(CANDYTABLE.Marshmallow).should('have.text', Cypress.env('Candy_Table').Marshmallow)
+        .contains('6.0').should('exist')
+
+        cy.get(CANDYTABLE.Nougat).should('have.text', Cypress.env('Candy_Table').Nougat)
+        .contains('7.0').should('exist')
+
+        cy.get(CANDYTABLE.Oreo).should('have.text', Cypress.env('Candy_Table').Oreo)
+        .contains('8.0').should('exist')
+
+        cy.get(CANDYTABLE.Pie).should('have.text', Cypress.env('Candy_Table').Pie)
+        .contains('9.0').should('exist')
     }
 
 
