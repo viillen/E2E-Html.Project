@@ -15,6 +15,13 @@ describe('Validar tela HOME', () => {
 
   it('Images', () => {
     validate.images()
+  })
 
+  it('Títulos e Subtítulos', () =>{
+    validate.titles_subtitles()
+  })
+
+  it('Textos', () => {
+    validate.texts()
   })
 })
