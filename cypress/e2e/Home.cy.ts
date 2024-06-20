@@ -24,4 +24,8 @@ describe('Validar tela HOME', () => {
   it('Textos', () => {
     validate.texts()
   })
+
+  it('Tabela de Doces', () => {
+    validate.candytable()
+  })
 })
