@@ -45,4 +45,22 @@ const TEXTS = {
 
 } 
 
-export { MENU, IMAGES, TEXTS, TITLES_SUBTITLES}
+const CANDYTABLE = {
+    Cupcake: '[data-cy="aside_ul1"] > :nth-child(1)',
+    Donut: '[data-cy="aside_ul1"] > :nth-child(2)',
+    Eclair: '[data-cy="aside_ul1"] > :nth-child(3)',
+    Frovo: '[data-cy="aside_ul1"] > :nth-child(4)',
+    Gingerbread: '[data-cy="aside_ul1"] > :nth-child(5)',
+    Honeycomb: '[data-cy="aside_ul1"] > :nth-child(6)',
+    IceCreamSandwich: '[data-cy="aside_ul1"] > :nth-child(7)',
+    JellyBean: '[data-cy="aside_ul1"] > :nth-child(8)',
+    KitKat: '[data-cy="aside_ul1"] > :nth-child(9)',
+    Lolipop: '[data-cy="aside_ul1"] > :nth-child(10)',
+    Marshmallow: '[data-cy="aside_ul1"] > :nth-child(11)',
+    Nougat: '[data-cy="aside_ul1"] > :nth-child(12)',
+    Oreo: '[data-cy="aside_ul1"] > :nth-child(13)',
+    Pie: '[data-cy="aside_ul1"] > :nth-child(14)',
+
+}
+
+export { MENU, IMAGES, TEXTS, TITLES_SUBTITLES, CANDYTABLE}
