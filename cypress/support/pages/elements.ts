@@ -76,6 +76,18 @@ const LINKS = {
     CursoEmVideo: '[href="https://www.youtube.com/c/CursoemVídeo"]'
 }
 
+const LAYOUT = {
+    Header: 'header',
+    Body: 'body',
+    MenuBar: '[data-cy="nav_a"]',
+    main: 'main',
+    VideoBar:  '.video',
+    TableTitle: '[data-cy="aside_subtitle1"]',
+    Table: 'aside',
+    Footer: 'footer'
+
+}
 
 
-export { MENU, IMAGES, TEXTS, TITLES_SUBTITLES, CANDYTABLE, VIDEO, LINKS}
+
+export { MENU, IMAGES, TEXTS, TITLES_SUBTITLES, CANDYTABLE, VIDEO, LINKS, LAYOUT}
