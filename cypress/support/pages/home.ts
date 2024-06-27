@@ -136,6 +136,12 @@ class validate {
         })
     }
 
+    VisualTesting(){
+        cy.scrollTo('bottom')
+        cy.wait(5000)
+        cy.percySnapshot('Página Completa')
+    }
+
 }
 
 export default new validate()
