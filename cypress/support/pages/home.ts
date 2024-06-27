@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import{ IMAGES, MENU, TEXTS, TITLES_SUBTITLES, CANDYTABLE} from "./elements";
+import{ IMAGES, MENU, TEXTS, TITLES_SUBTITLES, CANDYTABLE, VIDEO, LINKS} from "./elements";
 import '@percy/cypress';
 
 class validate {
@@ -91,6 +91,50 @@ class validate {
         .contains('9.0').should('exist')
     }
 
+    Iframe(){
+        cy.get(VIDEO.Iframe).then($iframe => {
+            const $body = $iframe.contents().find('body')
+            cy.wrap($body).should('not.be.empty')
+        }) 
+    }
+
+    linksCSS(){
+        cy.get(LINKS.Dan_Morrill).contains('Dan Morrill').should('have.attr', 'href', 'https://androidcommunity.com/dan-morrill-shows-us-the-android-mascot-that-almost-was-20130103/')
+        cy.get(LINKS.Inkscape).contains('Inkscape').should('have.attr', 'href', 'https://inkscape.org/pt-br/')
+        cy.get(LINKS.Irina_Blok).contains('Irina Blok').should('have.attr', 'href', 'https://www.irinablok.com')
+        cy.get(LINKS.Android_History).contains('Android History').should('have.attr', 'href', 'https://www.android.com/intl/en_uk/history/')
+        cy.get(LINKS.GustavoGuanabara).contains('Gustavo Guanabara').should('have.attr', 'href', 'https://gustavoguanabara.github.io')
+        cy.get(LINKS.CursoEmVideo).contains('CursoemVideo').should('have.attr', 'href', 'https://www.youtube.com/c/CursoemVídeo')
+    }
+
+    creator(){
+    cy.get(LINKS.GustavoGuanabara).contains('Gustavo Guanabara').invoke('removeAttr', 'target').click()
+    cy.origin('https://gustavoguanabara.github.io/', () => {
+        cy.url().should('eq', 'https://gustavoguanabara.github.io/')
+        cy.contains('Gustavo Guanabara').should('exist')
+        cy.go('back')
+        })
+    }
+
+    Inkscape(){
+        cy.get('[data-cy="article_p2"]').within(() => {
+            cy.contains('Inkscape').invoke('removeAttr', 'target').click()
+            cy.origin('https://inkscape.org/pt-br/', () => {
+                cy.url().should('eq', 'https://inkscape.org/pt-br/')
+                cy.contains('Inkscape').should('exist')
+                cy.go('back')
+            })
+        })
+    }
+
+    IrinaBlok(){
+        cy.get(LINKS.Irina_Blok).contains('Irina Blok').invoke('removeAttr', 'target').click()
+        cy.origin('https://www.irinablok.com/', () => {
+            cy.url().should('eq', 'https://www.irinablok.com/')
+            cy.contains('Irina Blok').should('exist')
+            cy.go('back')
+        })
+    }
 
 }
 
