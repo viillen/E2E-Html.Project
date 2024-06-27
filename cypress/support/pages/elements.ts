@@ -63,4 +63,19 @@ const CANDYTABLE = {
 
 }
 
-export { MENU, IMAGES, TEXTS, TITLES_SUBTITLES, CANDYTABLE}
+const VIDEO ={
+    Iframe: '[data-cy="article_iframe1"]'
+}
+
+const LINKS = {
+    Dan_Morrill: '[data-cy="article_p2"] > .externo',
+    Inkscape: '[data-cy="article_p2"] > .externo',
+    Irina_Blok: '[data-cy="article_p4"] > .externo',
+    Android_History: '[data-cy="aside_p3"] > .externo',
+    GustavoGuanabara: '[href="https://gustavoguanabara.github.io"]',
+    CursoEmVideo: '[href="https://www.youtube.com/c/CursoemVídeo"]'
+}
+
+
+
+export { MENU, IMAGES, TEXTS, TITLES_SUBTITLES, CANDYTABLE, VIDEO, LINKS}
