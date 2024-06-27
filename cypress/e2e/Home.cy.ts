@@ -28,4 +28,15 @@ describe('Validar tela HOME', () => {
   it('Tabela de Doces', () => {
     validate.candytable()
   })
+
+  it('Vídeo IFRAME', () =>{
+    validate.Iframe()
+  })
+
+  it('Links', () => {
+    validate.linksCSS()
+    validate.creator()
+    validate.IrinaBlok()
+    validate.Inkscape()
+  })
 })
